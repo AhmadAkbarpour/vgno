@@ -35,12 +35,12 @@ namespace DataLayer.Model
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string password { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "تقویم کاری")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string work_calender { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "تایم کاری")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string work_time { get; set; }
@@ -57,23 +57,25 @@ namespace DataLayer.Model
 
         [Display(Name = "وضعیت")]
         public bool status { get; set; }
-
+        //It should be enabled by default.
         [Display(Name = "دسته")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Category")]
         public int category_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "کسب و کار")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Business")]
         public int busines_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "سرویس")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Service")]
         public int service_Id { get; set; }
 
-        [Display(Name = "تاریخ ثبت")]
+        //the personoll and task table is seprate 
+
+        [Display(Name = "تاریخ و زمان ایجاد ")]
         public DateTime created_at { get; set; }
 
 

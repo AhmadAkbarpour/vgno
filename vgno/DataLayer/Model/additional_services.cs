@@ -14,12 +14,12 @@ namespace DataLayer.Model
         [Key]
         public int id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "نام")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string name { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قیمت")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string price { get; set; }
@@ -31,7 +31,7 @@ namespace DataLayer.Model
 
 
         #region Relations 
-        public virtual Services Services { get; set; }
+        public virtual Services Services { get; set; }  
         #endregion
     }
 }

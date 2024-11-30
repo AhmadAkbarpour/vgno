@@ -11,21 +11,21 @@ namespace DataLayer.Model
 {
     internal class service_price
     {
-        [Display(Name = "")]
+        [Display(Name = "سرویس")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Services")]
         public int service { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "پرسنل")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Personnel")]
         public int personnel { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قیمت")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string price { get; set; }
-
+        // personnol and task table is sepreate 
         #region Relations
         public virtual  Services Services { get; set; }
         public virtual personnel Personnel { get; set; }

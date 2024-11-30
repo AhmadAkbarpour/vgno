@@ -16,7 +16,7 @@ namespace DataLayer.Model
         public int business_Id { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "نام")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string name { get; set; }
@@ -40,49 +40,49 @@ namespace DataLayer.Model
         public string image { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "ساعت شروع کار ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public DateTime start_time { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "ساعت پایان کار ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public DateTime end_time { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "کیف پول")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
-        public int walet { get; set; }
+        public int wallet { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "اعلان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string message { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "دسته بندی کسب و کار ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Categories")]
         public int category_Id { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "پرسنل کسب و کار")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Personnel")]
         public int owner_Id { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "وضعیت")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public bool status { get; set; }
 
 
-        [Display(Name = "")]
+        [Display(Name = "زمان ایجاد ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public DateTime created_at { get; set; }

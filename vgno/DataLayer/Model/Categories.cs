@@ -18,7 +18,7 @@ namespace DataLayer.Model
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string name { get; set; }
 
-
+        [DefaultValue(true)]
         [Display(Name = "وضعیت")]
         public bool status { get; set; }
 
@@ -27,6 +27,7 @@ namespace DataLayer.Model
         public string image { get; set; }
 
         [Display(Name = "تاریخ ثبت")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string created_at { get; set; }
 
 

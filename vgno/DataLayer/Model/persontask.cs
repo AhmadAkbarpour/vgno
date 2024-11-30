@@ -11,22 +11,22 @@ namespace DataLayer.Model
 {
     internal class persontask
     {
-        [Display(Name = "")]
+        [Display(Name = "پرسنل")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Personnel")]
         public int person_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "سرویس")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Services")]
         public int service_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قیمت پرسنل")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string price_person { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "تاریخ ایجاد")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public DateTime created_at { get; set; }
 

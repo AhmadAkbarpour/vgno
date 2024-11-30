@@ -11,17 +11,17 @@ namespace DataLayer.Model
 {
     internal class personnel_style
     {
-        [Display(Name = "")]
+        [Display(Name = "پرسنل")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Personnel")]
         public int personnel { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "مدل مو")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Hair_Style")]
         public int style { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قیمت پرسنل")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string price_person { get; set; }

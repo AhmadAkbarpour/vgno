@@ -13,7 +13,7 @@ namespace DataLayer.Model
         [Key]
         public int menus_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "نام ")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string name { get; set; }

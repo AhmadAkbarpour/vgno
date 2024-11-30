@@ -31,22 +31,22 @@ namespace DataLayer.Model
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string description { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قیمت")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string price { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "قوانین")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [MaxLength(200, ErrorMessage = "{0} نمیتواند بیشتر از {1}کاراکتر باشد")]
         public string rules { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "دسته بندی")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Categories")] 
         public int category_Id { get; set; }
 
-        [Display(Name = "")]
+        [Display(Name = "کسب و کار")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         [ForeignKey("Business")]
         public int busines_Id { get; set; }
